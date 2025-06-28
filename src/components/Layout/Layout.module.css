@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    height: 100vh;
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.mapContainer {
+    flex: 1;
+    position: relative;
+}
+
+.statsPanel {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    bottom: 20px;
+    width: 320px;
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid #334155;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.statsCard {
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #334155;
+    flex-shrink: 0;
+}
+
+.statsCard h3 {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.chartContainer {
+    height: 285px;
+    position: relative;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .statsPanel {
+        width: 300px;
+        right: 10px;
+        top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .statsPanel {
+        position: static;
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+}
