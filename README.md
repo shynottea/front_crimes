@@ -10,16 +10,6 @@ npm install recharts
 npm start
 ```
 
-## 📁 Основные файлы
-
-```
-src/
-├── components/Charts/    # Графики
-├── hooks/               # useCrimeData.js
-├── utils/               # dataProcessingMock.js
-└── services/            # api.js (для будущего API)
-```
-
 ## 🔄 Переключение на реальное API
 
 1. В `useCrimeData.js`: `USE_MOCK_DATA = false`
